@@ -1,5 +1,5 @@
 name: CD GitOps
-on: 
+on:
   push:
     branchs: [main]
 
@@ -10,8 +10,8 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
-      
+      user: actions/checkout@v2
+
     - name: Build and push image to DockerHub
       user: docker/build-push-action@v1.1.0
       with:
