@@ -1,0 +1,8 @@
+#Gerando a imagem Docker
+docker build -t brunobm/gitopsfc:lastest .  
+
+#Rodando o imagem Docker
+docker run --rm -p 8080:8080 brunobm/gitopsfc:lastest
+
+#Enviando a imagem para meu Docker HUB
+docker push brunobm/gitopsfc:lastest
