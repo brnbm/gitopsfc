@@ -1,12 +1,12 @@
 name: CD GitOps
 on:
   push:
-    branchs: [main]
+    branches: [master]
 
 jobs:
   build:
     name: Build
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
@@ -18,5 +18,5 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ${{ secrets.DOCKER_USERNAME }}/gitopsfc
-        tags: ${{ github.sha }}, lastest
+        tags: ${{ github.sha }}, latest
 
