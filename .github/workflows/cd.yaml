@@ -1,7 +1,7 @@
 name: CD GitOps
 on:
   push:
-    branchs: [master]
+    branches: [master]
 
 jobs:
   build:
