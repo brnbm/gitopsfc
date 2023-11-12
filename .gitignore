@@ -1,2 +1,2 @@
 *.png
-k8s/Kustomize
+/k8s/Kustomize
