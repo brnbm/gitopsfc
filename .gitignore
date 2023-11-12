@@ -1,2 +1,4 @@
 *.png
-/k8s/.kustomize
+k8s/kustomize
+/k8s/kustomize
+/k8s/kustomize/
