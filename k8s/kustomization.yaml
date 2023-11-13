@@ -7,3 +7,5 @@ resources:
 
 images:
 - name: goserver
+  newName: DOCKER_USERNAME/gitopsfc
+  newTag: 7c5a63156d54386d6908df581eaac9b31188e3fb
