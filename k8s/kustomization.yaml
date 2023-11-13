@@ -7,3 +7,5 @@ resources:
 
 images:
 - name: goserver
+  newName: brunobm/gitopsfc
+  newTag: d1d185c203e3950e096ea2db6a1509c1350c340c

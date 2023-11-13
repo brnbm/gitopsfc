@@ -21,7 +21,7 @@ jobs:
         tags: ${{ github.sha }}, latest
 
     - name: Setup Kustomize
-      uses: imranismaeil/setup-kustomize@v1
+      uses: imranismail/setup-kustomize@v1
       with:
         kustomize-version: "3.6.1"
 
@@ -30,7 +30,7 @@ jobs:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
       run: |
         cd k8s
-        kustomize edit set image goserver=DOCKER_USERNAME/gitopsfc:$GITHUB_SHA
+        kustomize edit set image goserver=$DOCKER_USERNAME/gitopsfc:$GITHUB_SHA
 
     - name: Commit
       run: |
@@ -41,7 +41,7 @@ jobs:
     - name: Push
       uses: ad-m/github-push-action@master
       with:
-        github-token: ${{ secrets.TOKEN_GITHUB}}
+        github_token: ${{ secrets.GITHUB_TOKEN}}
         repository: brnbm/gitopsfc
 
 
