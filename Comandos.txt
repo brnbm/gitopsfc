@@ -21,3 +21,15 @@ kubectl get deploy
 
 #Verificando os serviços
 kubectl get services
+
+#Instalando o ArgoCD
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+
+#Senha padrão do ArcoCD
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+S216SIMbyQAdU3Kh
+
+#Acessar o ArgoCD pelo navegador
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+
