@@ -12,3 +12,12 @@ kind create cluster --name=gitopsfc
 
 #kustomize
 curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
+
+#Aplicando
+kubectl apply -f k8s 
+
+#Verificando o Deploy
+kubectl get deploy 
+
+#Verificando os serviços
+kubectl get services
